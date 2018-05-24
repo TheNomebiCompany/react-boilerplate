@@ -4,8 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "npx webpack",
-    "start": "webpack-dev-server --open"
+    "build": "npx webpack --env.NODE_ENV=production",
+    "start": "webpack-dev-server --open --env.NODE_ENV=local"
   },
   "author": "The Nomebi Company",
   "license": "MIT",

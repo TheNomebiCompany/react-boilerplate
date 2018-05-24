@@ -1,8 +1,9 @@
 const path = require('path');
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-module.exports = {
+module.exports = env => ({
     entry: './src/index.js',
     devtool: 'inline-source-map',
     devServer: {
@@ -14,6 +15,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src/index.tpl.html'),
             filename: 'index.html',
+        }),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(env.NODE_ENV),
         })
     ],
     module: {
@@ -45,4 +49,4 @@ module.exports = {
         filename: '[name].[chunkhash].js',
         path: path.resolve(__dirname, 'dist'),
     },
-};
+})
