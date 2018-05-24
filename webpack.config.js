@@ -25,6 +25,20 @@ module.exports = {
                     'babel-loader',
                 ],
             },
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader", // creates style nodes from JS strings
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            localIdentName: '[local]--[hash:base64:5]'
+                        }
+                    },
+                    "sass-loader", // compiles Sass to CSS
+                ]
+            }
         ],
     },
     output: {
