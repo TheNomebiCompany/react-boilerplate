@@ -1,16 +1,18 @@
 {
-  "name": "dcbrain-v2",
+  "name": "react-boilerplate",
   "version": "0.0.1",
   "description": "",
   "private": true,
   "scripts": {
-    "test": "jest",
     "build": "npx webpack",
     "start": "webpack-dev-server --open"
   },
   "author": "The Nomebi Company",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.8.3",
@@ -18,6 +20,7 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "lodash": "^4.17.10"
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
   }
 }
