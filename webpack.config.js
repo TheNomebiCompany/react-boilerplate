@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = env => ({
     entry: './src/index.js',
-    devtool: 'eval-source-map',
+    devtool: 'eval',
     devServer: {
         contentBase: './dist',
         port: 3001
