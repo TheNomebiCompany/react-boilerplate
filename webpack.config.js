@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = env => ({
     entry: './src/index.js',
-    devtool: 'inline-source-map',
+    devtool: 'eval-source-map',
     devServer: {
         contentBase: './dist',
         port: 3001
@@ -46,7 +46,7 @@ module.exports = env => ({
         ],
     },
     output: {
-        filename: '[name].[chunkhash].js',
+        filename: '[name].[hash].js',
         path: path.resolve(__dirname, 'dist'),
     },
 })
